@@ -25,3 +25,11 @@ function forEachOwnProperty(obj, action) {
     }
 }
 exports.forEachOwnProperty = forEachOwnProperty;
+function getOwnProperties(obj) {
+    var properties = [];
+    forEachOwnProperty(obj, function (value, key) {
+        properties.push(key);
+    });
+    return properties;
+}
+exports.getOwnProperties = getOwnProperties;

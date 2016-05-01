@@ -27,3 +27,11 @@ export function forEachOwnProperty(obj: any, action: (value: any, attr: string) 
     }
 }
 
+export function getOwnProperties(obj: any): string[] {
+    var properties = [];
+    forEachOwnProperty(obj, (value, key) => {
+        properties.push(key);
+    });
+    return properties;
+}
+

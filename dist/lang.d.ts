@@ -10,3 +10,4 @@ export declare type Type = Function;
  * The function to apply.
  */
 export declare function forEachOwnProperty(obj: any, action: (value: any, attr: string) => void): void;
+export declare function getOwnProperties(obj: any): string[];

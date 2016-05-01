@@ -1,9 +1,9 @@
 "use strict";
-var try_1 = require('./try');
+var converter_1 = require('./converter');
 function composeCodecs(fst, snd) {
     return {
-        encode: function (arg) { return fst.encode(arg).flatMap(snd.encode); },
-        decode: function (arg) { return snd.decode(arg).flatMap(fst.decode); }
+        encode: converter_1.composeConverters(fst.encode, snd.encode),
+        decode: converter_1.composeConverters(snd.decode, fst.decode)
     };
 }
 exports.composeCodecs = composeCodecs;
@@ -16,6 +16,6 @@ function chainCodecs() {
 }
 exports.chainCodecs = chainCodecs;
 exports.identity = {
-    encode: function (arg) { return try_1.success(arg); },
-    decode: function (arg) { return try_1.success(arg); }
+    encode: converter_1.identityConverter,
+    decode: converter_1.identityConverter
 };

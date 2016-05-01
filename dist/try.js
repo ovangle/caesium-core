@@ -61,3 +61,15 @@ function failure(errorMessage) {
     return new Failure(errorMessage);
 }
 exports.failure = failure;
+function trySequence(values) {
+    var result = [];
+    for (var _i = 0, values_1 = values; _i < values_1.length; _i++) {
+        var value = values_1[_i];
+        if (!value.isSuccess) {
+            return failure(value.error);
+        }
+        result.push(value.get());
+    }
+    return success(result);
+}
+exports.trySequence = trySequence;

@@ -90,4 +90,15 @@ export function failure<T>(errorMessage: any): Try<T> {
     return new Failure<T>(errorMessage);
 }
 
+export function trySequence<T>(values: Try<T>[]): Try<T[]> {
+    var result = [];
+    for (let value of values) {
+        if (!value.isSuccess) {
+            return failure<T[]>(value.error);
+        }
+        result.push(value.get());
+    }
+    return success(result);
+}
+
 

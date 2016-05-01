@@ -10,3 +10,4 @@ export interface Try<T> {
 export declare function apply<T>(foo: () => T): Try<T>;
 export declare function success<T>(value: T): Try<T>;
 export declare function failure<T>(errorMessage: any): Try<T>;
+export declare function trySequence<T>(values: Try<T>[]): Try<T[]>;

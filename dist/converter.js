@@ -1,7 +1,6 @@
 "use strict";
-var try_1 = require('./try');
 function composeConverters(fst, snd) {
-    return function (arg) { return fst(arg).flatMap(function (input) { return snd(input); }); };
+    return function (input) { return snd(fst(input)); };
 }
 exports.composeConverters = composeConverters;
 function chainConverters() {
@@ -13,10 +12,10 @@ function chainConverters() {
 }
 exports.chainConverters = chainConverters;
 function identityConverter(arg) {
-    return try_1.success(arg);
+    return arg;
 }
 exports.identityConverter = identityConverter;
 function toStringConverter(arg) {
-    return try_1.apply(function () { return arg.toString(); });
+    return arg.toString();
 }
 exports.toStringConverter = toStringConverter;
