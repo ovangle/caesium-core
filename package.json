@@ -1,0 +1,29 @@
+{
+  "name": "caesium-core",
+  "version": "0.0.1",
+  "description": "Generic interfaces and functions which will be useful to any project",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "live-server --open=test.html",
+    "clean": "rm -r dist/*"
+  },
+  "keywords": [
+    "typescript",
+    "utils",
+    "caesium"
+  ],
+  "author": "Thomas Stephenson <ovangle@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "reflect-metadata": "0.1.2",
+    "es6-shim": "^0.35.0"
+  },
+  "devDependencies": {
+    "jasmine-core": "2.4.1",
+    "live-server": "^0.8.2",
+    "systemjs": "^0.19.27"
+  }
+}
