@@ -1,6 +1,6 @@
 "use strict";
-var try_1 = require('../src/try');
-var converter_1 = require('../src/converter');
+var try_1 = require('../try');
+var converter_1 = require('../converter');
 var mock_converters_1 = require("./mock/mock_converters");
 var mock_converters_2 = require("./mock/mock_converters");
 function converterTests() {

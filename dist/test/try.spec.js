@@ -1,5 +1,5 @@
 "use strict";
-var try_1 = require('../src/try');
+var try_1 = require('../try');
 function tryTests() {
     describe('try', function () {
         successTests();

@@ -1,4 +1,4 @@
-import {isDefined, isBlank, forEachOwnProperty} from '../src/lang';
+import {isDefined, isBlank, forEachOwnProperty} from '../lang';
 
 export function langTests() {
     describe('lang', () => {

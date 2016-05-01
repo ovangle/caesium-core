@@ -2,19 +2,19 @@
 <head>
     <title>Caesium testing</title>
 
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="../node_modules/systemjs/dist/system.src.js"></script>
 
-    <script src="node_modules/es6-shim/es6-shim.js"></script>
+    <script src="../node_modules/es6-shim/es6-shim.js"></script>
 
     <!-- Jasmine imports -->
-    <script src="node_modules/jasmine-core/lib/jasmine-core/jasmine.js"></script>
-    <script src="node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
-    <script src="node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
+    <script src="../node_modules/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+    <script src="../node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+    <script src="../node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
 
     <!-- system.js -->
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="../node_modules/systemjs/dist/system.src.js"></script>
 
-    <link rel="stylesheet" href="node_modules/jasmine-core/lib/jasmine-core/jasmine.css">
+    <link rel="stylesheet" href="../node_modules/jasmine-core/lib/jasmine-core/jasmine.css">
 </head>
 <body>
 <script>
@@ -31,7 +31,7 @@
     console.log('preparing tests');
 
     // Core tests
-    System.import('./dist/test/all.spec')
+    System.import('../dist/test/all.spec')
             .then(window.onload) // Trigger the jasmine test runner
             .catch(console.error.bind(console));
 </script>

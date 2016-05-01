@@ -1,6 +1,6 @@
 "use strict";
-var codec_1 = require('../src/codec');
-var try_1 = require('../src/try');
+var codec_1 = require('../codec');
+var try_1 = require('../try');
 var mock_codecs_1 = require("./mock/mock_codecs");
 function codecTests() {
     describe('codec', function () {

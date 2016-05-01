@@ -1,5 +1,5 @@
-import {success, failure} from '../src/try';
-import {composeConverters, chainConverters, identityConverter, toStringConverter} from '../src/converter';
+import {success, failure} from '../try';
+import {composeConverters, chainConverters, identityConverter, toStringConverter} from '../converter';
 import {incrementingConverter, toSimpleObjectConverter} from "./mock/mock_converters";
 import {fromSimpleObjectConverter} from "./mock/mock_converters";
 

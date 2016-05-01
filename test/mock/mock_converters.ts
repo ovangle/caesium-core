@@ -1,5 +1,5 @@
-import {Converter} from '../../src/converter';
-import {Try, success, failure, apply} from '../../src/try';
+import {Converter} from '../../converter';
+import {Try, success, failure, apply} from '../../try';
 
 export function incrementingConverter(input: number): Try<number> {
     return success(input + 1);

@@ -1,4 +1,4 @@
-import { Try } from '../../src/try';
+import { Try } from '../../try';
 export declare function incrementingConverter(input: number): Try<number>;
 export declare function decrementingConverter(input: any): Try<number>;
 export declare function toSimpleObjectConverter(input: number): Try<{

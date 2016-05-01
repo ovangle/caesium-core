@@ -1,6 +1,6 @@
 "use strict";
 var mock_converters_1 = require('./mock_converters');
-var converter_1 = require("../../src/converter");
+var converter_1 = require("../../converter");
 exports.incrementingCodec = {
     encode: mock_converters_1.incrementingConverter,
     decode: mock_converters_1.decrementingConverter

@@ -1,5 +1,5 @@
-import {identity, composeCodecs, chainCodecs} from '../src/codec';
-import {success, failure} from '../src/try';
+import {identity, composeCodecs, chainCodecs} from '../codec';
+import {success, failure} from '../try';
 import {incrementingCodec, toSimpleObjectCodec, intToStringCodec, stringReversingCodec} from "./mock/mock_codecs";
 
 export function codecTests() {
