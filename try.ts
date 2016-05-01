@@ -2,6 +2,7 @@
 
 export interface Try<T> {
     isSuccess: boolean;
+    error?: any;
 
     flatMap<U>(foo: (arg: T) => Try<U>): Try<U>
     map<U>(foo: (arg: T) => U): Try<U>;
@@ -32,7 +33,7 @@ class Success<T> implements Try<T> {
     forEach(action: (value) => any): void {
         action(this.value);
     }
-    
+
     get(): T {
         return this.value;
     }
@@ -85,7 +86,8 @@ export function success<T>(value: T): Try<T> {
     return new Success<T>(value);
 }
 
-export function failure<T>(errorMessage: string): Try<T> {
+export function failure<T>(errorMessage: any): Try<T> {
     return new Failure<T>(errorMessage);
 }
+
 
