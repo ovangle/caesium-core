@@ -1,4 +1,4 @@
-import {apply, success, failure} from '../try';
+import {apply, success, failure} from '../src/try';
 
 export function tryTests() {
     describe('try', () => {

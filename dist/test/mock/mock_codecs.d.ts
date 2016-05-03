@@ -1,4 +1,4 @@
-import { Try } from '../../try';
+import { Try } from '../../src/try';
 export declare const incrementingCodec: {
     encode: (input: number) => Try<number>;
     decode: (input: any) => Try<number>;
@@ -16,6 +16,6 @@ export declare const stringReversingCodec: {
     decode: (input: string) => Try<string>;
 };
 export declare const intToStringCodec: {
-    encode: (arg: any) => Try<string>;
+    encode: (arg: any) => string;
     decode: (input: string) => Try<number>;
 };

@@ -1,5 +1,5 @@
 "use strict";
-var lang_1 = require('../lang');
+var lang_1 = require('../src/lang');
 function langTests() {
     describe('lang', function () {
         isDefinedTests();

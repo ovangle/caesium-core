@@ -1,4 +1,4 @@
-import {memoize} from '../decorators';
+import {memoize} from '../src/decorators';
 
 export function decoratorTests() {
     describe('decorators', () => {

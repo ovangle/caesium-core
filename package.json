@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "live-server --open=test.html",
-    "clean": "rm -r dist/*"
+    "clean": "python3 tools/clean",
+    "prepare": "cp dist/src/* ."
   },
   "keywords": [
     "typescript",

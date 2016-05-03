@@ -1,4 +1,4 @@
-import {Try} from '../../try';
+import {Try} from '../../src/try';
 import {
     incrementingConverter,
     decrementingConverter,
@@ -7,7 +7,7 @@ import {
     stringReversingConverter,
     intFromStringConverter
 } from './mock_converters';
-import {toStringConverter} from "../../converter";
+import {toStringConverter} from "../../src/converter";
 
 export const incrementingCodec = {
     encode: incrementingConverter,
