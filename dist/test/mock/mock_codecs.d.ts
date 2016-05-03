@@ -1,21 +1,20 @@
-import { Try } from '../../src/try';
 export declare const incrementingCodec: {
-    encode: (input: number) => Try<number>;
-    decode: (input: any) => Try<number>;
+    encode: (input: number) => number;
+    decode: (input: any) => number;
 };
 export declare const toSimpleObjectCodec: {
-    encode: (input: number) => Try<{
+    encode: (input: number) => {
         a: number;
-    }>;
+    };
     decode: (input: {
         a: number;
-    }) => Try<number>;
+    }) => number;
 };
 export declare const stringReversingCodec: {
-    encode: (input: string) => Try<string>;
-    decode: (input: string) => Try<string>;
+    encode: (input: string) => string;
+    decode: (input: string) => string;
 };
 export declare const intToStringCodec: {
     encode: (arg: any) => string;
-    decode: (input: string) => Try<number>;
+    decode: (input: string) => number;
 };
