@@ -88,11 +88,11 @@ function getDecoderTests() {
                 incrementBy = 15;
 
                 constructor(codec:Codec<number,number>) {
-                    this.encoder = getEncoder(codec);
+                    this.decoder = getEncoder(codec);
                 }
             }
             var foo = new Foo(new IncrementingCodec(1));
-            expect(foo.encoder(41)).toBe(42);
+            expect(foo.decoder(41)).toBe(42);
         })
     });
 }
