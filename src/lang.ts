@@ -9,6 +9,10 @@ export function isBlank(obj: any): boolean {
     return obj === null || typeof obj === "undefined";
 }
 
+export function isFunction(obj: any): boolean {
+    return typeof obj === "function";
+}
+
 export type Type = Function;
 
 /**

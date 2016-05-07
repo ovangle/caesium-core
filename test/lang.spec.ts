@@ -1,12 +1,11 @@
-import {isDefined, isBlank, forEachOwnProperty} from '../src/lang';
+import {isDefined, isBlank, isFunction, forEachOwnProperty} from '../src/lang';
 
 export function langTests() {
     describe('lang', () => {
         isDefinedTests();
         isBlankTests();
+        isFunctionTests();
         forEachOwnPropertyTests();
-
-
     });
 }
 
@@ -28,6 +27,17 @@ function isBlankTests() {
             expect(isBlank(null)).toBe(true);
             expect(isBlank({})).toBe(false);
             expect(isBlank(false)).toBe(false);
+        });
+    });
+}
+
+function isFunctionTests() {
+    describe('isFunction', () => {
+        it('should test whether the given object is a function', () => {
+            expect(isFunction(function() { })).toBe(true);
+            expect(isFunction(null)).toBe(false);
+            expect(isFunction(undefined)).toBe(false);
+            expect(isFunction({'hello': 'world'})).toBe(false);
         });
     });
 }
