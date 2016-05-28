@@ -13,6 +13,14 @@ export function isFunction(obj: any): boolean {
     return typeof obj === "function";
 }
 
+export function isNumber(obj: any): boolean {
+    return !isBlank(obj) && typeof obj === "number";
+}
+
+export function isBoolean(obj: any): boolean {
+    return !isBlank(obj) && typeof obj === "boolean";
+}
+
 export type Type = Function;
 
 /**
