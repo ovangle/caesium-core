@@ -2,6 +2,7 @@ import {Converter} from '../src/converter';
 import {identity, composeCodecs, chainCodecs, isCodec, Codec, getEncoder, getDecoder} from '../src/codec';
 import {incrementingCodec, toSimpleObjectCodec, intToStringCodec, stringReversingCodec} from "./mock/mock_codecs";
 
+
 export function codecTests() {
     describe('codec', () => {
         identityCodecTests();
@@ -69,7 +70,12 @@ function getEncoderTests() {
             }
             var foo = new Foo(new IncrementingCodec(1));
             expect(foo.encoder(43)).toBe(42);
-        })
+        });
+
+        it('should accept a converter as argument', () => {
+            let converter = (arg) => arg;
+            expect(getEncoder(converter)).toBe(converter);
+        });
     });
 }
 
@@ -93,7 +99,12 @@ function getDecoderTests() {
             }
             var foo = new Foo(new IncrementingCodec(1));
             expect(foo.decoder(41)).toBe(42);
-        })
+        });
+
+        it('should accept a converter as argument', () => {
+            let converter = (arg) => arg;
+            expect(getDecoder(converter)).toBe(converter);
+        });
     });
 }
 

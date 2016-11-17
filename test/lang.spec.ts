@@ -1,10 +1,13 @@
-import {isDefined, isBlank, isFunction, forEachOwnProperty} from '../src/lang';
+import {isDefined, isBlank, isFunction, forEachOwnProperty, isNumber, isBoolean, isString} from '../src/lang';
 
 export function langTests() {
     describe('lang', () => {
         isDefinedTests();
         isBlankTests();
         isFunctionTests();
+        isNumberTests();
+        isBooleanTests();
+        isStringTests();
         forEachOwnPropertyTests();
     });
 }
@@ -29,6 +32,39 @@ function isBlankTests() {
             expect(isBlank(false)).toBe(false);
         });
     });
+}
+
+function isNumberTests() {
+    describe('isNumber', () => {
+        it('should test whether the given object is a number', () => {
+            expect(isNumber(true)).toBe(false);
+            expect(isNumber('4')).toBe(false);
+            expect(isNumber(null)).toBe(false);
+            expect(isNumber(4)).toBe(true);
+        });
+    });
+}
+
+function isBooleanTests() {
+    describe('isBoolean', () => {
+        it('should test whether the given object is a number', () => {
+            expect(isBoolean(true)).toBe(true);
+            expect(isBoolean('4')).toBe(false);
+            expect(isBoolean(null)).toBe(false);
+            expect(isBoolean(4)).toBe(false);
+        });
+    })
+}
+
+function isStringTests() {
+    describe('isString', () => {
+        it('should test whether the given object is a number', () => {
+            expect(isString(true)).toBe(false);
+            expect(isString('4')).toBe(true);
+            expect(isString(null)).toBe(false);
+            expect(isString(4)).toBe(false);
+        });
+    })
 }
 
 function isFunctionTests() {

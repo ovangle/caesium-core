@@ -14,14 +14,20 @@ export function isFunction(obj: any): boolean {
 }
 
 export function isNumber(obj: any): boolean {
-    return !isBlank(obj) && typeof obj === "number";
+    return typeof obj === "number";
 }
 
 export function isBoolean(obj: any): boolean {
-    return !isBlank(obj) && typeof obj === "boolean";
+    return typeof obj === "boolean";
 }
 
-export type Type = Function;
+export function isString(obj: any): boolean {
+    return typeof obj === "string";
+}
+
+export interface Type<T> extends Function {
+    new (...args: any[]): T;
+}
 
 /**
  * Iterates over the properties declared directly.
