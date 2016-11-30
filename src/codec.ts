@@ -1,5 +1,9 @@
 import {isFunction, isBlank} from './lang';
-import {Converter, composeConverters, identityConverter} from './converter';
+import {
+    Converter, composeConverters, identityConverter, EncodingException
+} from './converter';
+
+export {Converter, EncodingException};
 
 export interface Codec<T,R> {
     encode: Converter<T,R>;

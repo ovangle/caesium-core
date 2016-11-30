@@ -1,3 +1,5 @@
+import {Exception} from './exception';
+
 /**
  * A simple interface which matches a function
  * which accepts an input and an optional map of
@@ -6,6 +8,13 @@
  */
 export interface Converter<T,R> {
     (arg: T): R;
+}
+
+
+export class EncodingException extends Exception {
+    constructor(message: string) {
+        super('EncodingException: ' + message);
+    }
 }
 
 
