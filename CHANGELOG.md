@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.1
+- Add 'assert' module, move `assert` and `AssertionError` from 'exceptions' into module.
+- Add EncodingException to 'converter' module
+- codec module now exports Converter, EncodingException
+
 ## 0.2.0
 - lang.Type now accepts a mandatory generic type argument
 
@@ -9,8 +14,6 @@
     - Also exposes an 'assert' utility function.
 - Allow a Converter to be passed as argument to the `codec.getEncoder`, `codec.getDecoder` functions.
 - decorators.memoize can now be applied to a gettable property
-
-
 
 ## 0.1.3
 - Bump reflect-metadata dependency to ~0.1.8
