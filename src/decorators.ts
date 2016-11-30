@@ -1,4 +1,4 @@
-import {isBlank, isDefined, Type, Constructor} from "./lang";
+import {isBlank, isDefined, Type} from "./lang";
 
 export class DecoratorError extends Error {
     constructor(errMessage) {
