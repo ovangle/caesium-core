@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.2
+- Exceptions now work with long-stack-trace-zone
+
 ## 0.2.1
 - Add 'assert' module, move `assert` and `AssertionError` from 'exceptions' into module.
 - Add EncodingException to 'converter' module

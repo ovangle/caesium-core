@@ -13,7 +13,8 @@ export interface Converter<T,R> {
 
 export class EncodingException extends Exception {
     constructor(message: string) {
-        super('EncodingException: ' + message);
+        super(message);
+
     }
 }
 

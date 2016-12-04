@@ -3,7 +3,7 @@ import {Exception} from './exception';
 
 export class AssertionError extends Exception {
     constructor(message: string) {
-        super('AssertionError: ' + message);
+        super(message);
     }
 }
 
