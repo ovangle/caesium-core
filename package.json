@@ -1,6 +1,6 @@
 {
   "name": "caesium-core",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Generic interfaces and functions which will be useful to any project",
   "main": "index.js",
   "directories": {
@@ -20,7 +20,7 @@
   "author": "Thomas Stephenson <ovangle@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "reflect-metadata": "~0.1.8",
+    "reflect-metadata": "~0.1.8"
   },
   "devDependencies": {
     "jasmine-core": "2.4.1",
