@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.4
+- Removed es6-shim peer dependency
+
 ## 0.2.3
 - Exception now extends error correctly
 

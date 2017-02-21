@@ -21,7 +21,6 @@
   "license": "MIT",
   "peerDependencies": {
     "reflect-metadata": "~0.1.8",
-    "es6-shim": "^0.35.0"
   },
   "devDependencies": {
     "jasmine-core": "2.4.1",
