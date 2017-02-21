@@ -1,7 +1,10 @@
 # Changelog
 
+## 0.2.3
+- Exception now extends error correctly
+
 ## 0.2.2
-- Exceptions now work with long-stack-trace-zone
+- No changes, bad publish
 
 ## 0.2.1
 - Add 'assert' module, move `assert` and `AssertionError` from 'exceptions' into module.

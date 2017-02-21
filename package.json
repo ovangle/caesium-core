@@ -1,6 +1,6 @@
 {
   "name": "caesium-core",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Generic interfaces and functions which will be useful to any project",
   "main": "index.js",
   "directories": {
