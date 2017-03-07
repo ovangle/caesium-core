@@ -1,7 +1,10 @@
 # Changelog
 
-## 0.2.4
+## 0.3.0
+- Add `math` library, export 'range' function, behaves similarly to python's `range`
+-  Target ES6 only
 - Removed es6-shim peer dependency
+
 
 ## 0.2.3
 - Exception now extends error correctly
