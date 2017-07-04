@@ -1,6 +1,6 @@
 {
   "name": "caesium-core",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "Generic interfaces and functions which will be useful to any project",
   "main": "index.js",
   "directories": {
@@ -9,8 +9,7 @@
   "scripts": {
     "test": "live-server --open=test/index.html",
     "build": "tsc",
-    "clean": "python3 tools/clean",
-    "prepare": "cp dist/src/* ."
+    "clean": "python3 tools/clean"
   },
   "keywords": [
     "typescript",
